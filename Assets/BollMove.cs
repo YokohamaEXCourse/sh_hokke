@@ -15,26 +15,37 @@ public class BollMove : MonoBehaviour
     {
         rb.AddForce(10, 0, 0,ForceMode.Impulse);
         score=0;
+        score2=0;
     }
 
     // Update is called once per frame
     void Update()//ずっと
-    {
-       if(transform.position.x>25)
-       {
-           transform.position=new Vector3(-0.6f,1,0.11f);
+     {
+        if(transform.position.x>25)
+        {
+            transform.position=new Vector3(-0.6f,1,0.11f);
 
-           scoreText.text=score.ToString();
+            rb.AddForce(10, 0, 0,ForceMode.Impulse);
+
+            rb.velocity=Vector3.zero;
+
+            score2+=10;
+
+            scoreText2.text=score2.ToString();
+
+        }
+        if(transform.position.x<-30)
+        {
+            transform.position=new Vector3(-0.6f,1,0.11f);
+
+            rb.AddForce(-10, 0, 0,ForceMode.Impulse);
+
+            rb.velocity=Vector3.zero;
 
             score+=10;
-       }
-       if(transform.position.x<-30)
-       {
-           transform.position=new Vector3(-0.6f,1,0.11f);
 
-           scoreText2.text=score.ToString();
+            scoreText.text=score.ToString();
 
-            score+=10;
-       }
-    }
+        }
+     }
 }
