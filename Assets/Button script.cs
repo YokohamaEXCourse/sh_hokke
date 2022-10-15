@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; //シーンマネージャーを読み込む命令
 
 public class Buttonscript : MonoBehaviour
 {
@@ -19,6 +19,6 @@ public class Buttonscript : MonoBehaviour
 
     public void OnClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SampleScene"); //シーンを「SampleScene」に切り替える命令
     }
 }

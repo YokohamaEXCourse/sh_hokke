@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BollMove : MonoBehaviour
 {
@@ -34,6 +35,11 @@ public class BollMove : MonoBehaviour
             scoreText2.text=score2.ToString();
 
         }
+
+        if(score2==100)
+        {
+            SceneManager.LoadScene("2Pwin");
+        }
         if(transform.position.x<-30)
         {
             transform.position=new Vector3(-0.6f,1,0.11f);
@@ -47,5 +53,11 @@ public class BollMove : MonoBehaviour
             scoreText.text=score.ToString();
 
         }
+
+        if(score==100)
+        {
+            SceneManager.LoadScene("1Pwin");
+        }
+
      }
 }
