@@ -29,5 +29,10 @@ public class RotationPlayer1 : MonoBehaviour
             transform.Rotate(new Vector3(0,10,0));
         }
     }
+
+         if(Input.GetKey(KeyCode.E))
+        {
+           
+        }
     }
 }
