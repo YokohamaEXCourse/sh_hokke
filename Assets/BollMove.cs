@@ -36,7 +36,7 @@ public class BollMove : MonoBehaviour
 
         }
 
-        if(score2==100)
+        if(score2==50)
         {
             SceneManager.LoadScene("2Pwin");
         }
@@ -54,7 +54,7 @@ public class BollMove : MonoBehaviour
 
         }
 
-        if(score==100)
+        if(score==50)
         {
             SceneManager.LoadScene("1Pwin");
         }

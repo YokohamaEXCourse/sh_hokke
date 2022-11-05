@@ -29,5 +29,10 @@ public class RotationPlayer2 : MonoBehaviour
             transform.Rotate(new Vector3(0,10,0));
         }
     }
+
+     if(Input.GetKey(KeyCode.Return))
+        {
+           transform.rotation=Quaternion.Euler(0f,180f,0f);
+        }
 }   
 }

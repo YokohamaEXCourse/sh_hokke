@@ -32,7 +32,7 @@ public class RotationPlayer1 : MonoBehaviour
 
          if(Input.GetKey(KeyCode.E))
         {
-           
+           transform.rotation=Quaternion.Euler(0f,180f,0f);
         }
     }
 }
